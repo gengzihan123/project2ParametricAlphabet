@@ -30,10 +30,10 @@ const letterC = {
   "offsety": 0
 }
 
-const colorFront1  = "#199cff";
-const colorFront2  = "#59ccff";
-const colorBack    = "#e3eded";
-const colorStroke  = "#233f11";
+const colorFront1  = "#199cff";//big, main
+const colorFront2  = "#ffffff";//small
+const colorBack    = "#e3edef";//background
+const colorStroke  = "#233f11";//stroke
 
 function setup () {
   // create the drawing canvas, save the canvas element
@@ -55,10 +55,16 @@ function drawLetter(posx, posy, letterData) {
   let pos2y = posy + letterData["offsety"];
 
   // draw two circles
+  rectMode(CENTER)
   fill(colorFront1);
-  ellipse(posx, posy, 150, 150);
+  // ellipse(posx, posy, 150, 150);
+  rect(posx, posy, 100, 150, 20)
   fill(colorFront2);
-  ellipse(pos2x, pos2y, size2, size2);
+  // ellipse(pos2x, pos2y, size2, size2);
+  push()
+  rotate(PI)
+  rect(posx+30, posy-15, 20, 100)
+  pop()
 }
 
 function draw () {
