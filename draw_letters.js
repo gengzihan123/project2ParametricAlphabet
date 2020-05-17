@@ -16,7 +16,7 @@ const colorStroke  = "#233f11";
 function drawLetter(letterData) {
   // color/stroke setup
   stroke(colorStroke);
-  strokeWeight(4);
+  strokeWeight(2);
 
   // determine parameters for second circle
   let posx1 = 50+letterData["x1"];
